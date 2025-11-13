@@ -9,7 +9,12 @@ import { nanoid } from "nanoid";
 const app = express();
 const PORT = process.env.PORT || 4000;
 const WORKER_TIMEOUT_MS = 15000;
+const DEFAULT_MAX_BUCKETS = Number(process.env.DEFAULT_MAX_BUCKETS || 10);
+const DEFAULT_BUCKET_SIZE_BYTES = Number(process.env.DEFAULT_BUCKET_SIZE_BYTES || 64 * 1024);
+const DEFAULT_BUCKET_TIMEOUT_MS = Number(process.env.DEFAULT_BUCKET_TIMEOUT_MS || 60000);
+
 const workerHeartbeats = new Map();
+const taskDataCache = new Map();
 
 setInterval(() => {
   const cutoff = Date.now() - WORKER_TIMEOUT_MS * 2;
@@ -74,6 +79,176 @@ const upload = multer({
   }),
 });
 
+function getTaskDataPath(task) {
+  if (!task || !task.dataFileName) return null;
+  return path.join(storageDir, task.id, task.dataFileName);
+}
+
+function getTaskDataArray(task) {
+  const dataPath = getTaskDataPath(task);
+  if (!dataPath) return [];
+  try {
+    const stats = fs.statSync(dataPath);
+    const cache = taskDataCache.get(task.id);
+    if (cache && cache.mtimeMs === stats.mtimeMs) {
+      return cache.items;
+    }
+    const raw = fs.readFileSync(dataPath, "utf8");
+    const parsed = JSON.parse(raw);
+    const items = Array.isArray(parsed) ? parsed : [];
+    taskDataCache.set(task.id, { mtimeMs: stats.mtimeMs, items });
+    return items;
+  } catch (error) {
+    console.error(`Failed to read task data for ${task?.id}:`, error.message);
+    taskDataCache.delete(task?.id);
+    return [];
+  }
+}
+
+function getTaskDataSlice(task, start, end) {
+  const items = getTaskDataArray(task);
+  return items.slice(start, end);
+}
+
+function computeBucketPlan(items, maxBuckets, initialSize) {
+  const sanitizedMax = Math.max(1, Number.isFinite(maxBuckets) && maxBuckets > 0 ? Math.floor(maxBuckets) : DEFAULT_MAX_BUCKETS);
+  let allowedBuckets = sanitizedMax;
+  let bucketSize = Math.max(256, Number.isFinite(initialSize) && initialSize > 0 ? Math.floor(initialSize) : DEFAULT_BUCKET_SIZE_BYTES);
+
+  if (!Array.isArray(items) || items.length === 0) {
+    return {
+      bucketSizeBytes: bucketSize,
+      allowedBuckets,
+      buckets: [
+        {
+          start: 0,
+          end: 0,
+          byteSize: 0,
+        },
+      ],
+    };
+  }
+
+  const itemSizes = items.map((item) => {
+    try {
+      return Buffer.byteLength(JSON.stringify(item ?? null), "utf8");
+    } catch (e) {
+      return Buffer.byteLength(String(item ?? ""), "utf8");
+    }
+  });
+
+  // Ensure every single item fits by growing bucket size and reducing bucket count if needed
+  while (true) {
+    let adjusted = false;
+    for (const size of itemSizes) {
+      if (size > bucketSize) {
+        allowedBuckets = Math.max(1, Math.floor(allowedBuckets / 2));
+        bucketSize = bucketSize * 2;
+        adjusted = true;
+        break;
+      }
+    }
+    if (!adjusted) break;
+  }
+
+  while (true) {
+    const buckets = [];
+    let currentStart = 0;
+    let currentBytes = 0;
+    for (let i = 0; i < items.length; i++) {
+      const size = itemSizes[i];
+      if (currentBytes > 0 && currentBytes + size > bucketSize) {
+        buckets.push({ start: currentStart, end: i, byteSize: currentBytes });
+        currentStart = i;
+        currentBytes = 0;
+      }
+      currentBytes += size;
+    }
+    buckets.push({ start: currentStart, end: items.length, byteSize: currentBytes });
+
+    if (buckets.length <= allowedBuckets || allowedBuckets <= 1) {
+      return {
+        bucketSizeBytes: bucketSize,
+        allowedBuckets,
+        buckets,
+      };
+    }
+
+    allowedBuckets = Math.max(1, Math.floor(allowedBuckets / 2));
+    bucketSize = bucketSize * 2;
+  }
+}
+
+function ensureTaskBucketPlan(task, db) {
+  if (!task) return null;
+  const dataPath = getTaskDataPath(task);
+  const needsPlan =
+    !task.bucketPlan ||
+    !Array.isArray(task.bucketPlan.buckets) ||
+    task.bucketPlan.buckets.length === 0;
+
+  if (!needsPlan && dataPath) {
+    try {
+      const stats = fs.statSync(dataPath);
+      if (task.bucketPlan.dataMtimeMs && task.bucketPlan.dataMtimeMs !== stats.mtimeMs) {
+        task.bucketPlan = null;
+      }
+    } catch (e) {
+      // data file missing, regenerate plan with empty items
+      task.bucketPlan = null;
+    }
+  }
+
+  if (!task.bucketPlan || !Array.isArray(task.bucketPlan.buckets) || task.bucketPlan.buckets.length === 0) {
+    const items = getTaskDataArray(task);
+    const maxBuckets = task.maxBuckets || task.totalChunks || DEFAULT_MAX_BUCKETS;
+    const initialSize = task.bucketSizeBytes || DEFAULT_BUCKET_SIZE_BYTES;
+    const plan = computeBucketPlan(items, maxBuckets, initialSize);
+    const buckets = plan.buckets.map((bucket, index) => ({
+      index,
+      itemStart: bucket.start,
+      itemEnd: bucket.end,
+      byteSize: bucket.byteSize,
+      status: "pending",
+      updatedAt: null,
+    }));
+    let dataMtimeMs = null;
+    if (dataPath) {
+      try {
+        const stats = fs.statSync(dataPath);
+        dataMtimeMs = stats.mtimeMs;
+      } catch (e) {
+        dataMtimeMs = null;
+      }
+    }
+    task.bucketPlan = {
+      bucketSizeBytes: plan.bucketSizeBytes,
+      maxBuckets: plan.allowedBuckets,
+      buckets,
+      generatedAt: new Date().toISOString(),
+      dataMtimeMs,
+    };
+    task.totalBuckets = buckets.length;
+    task.totalChunks = task.totalBuckets;
+    task.bucketSizeBytes = plan.bucketSizeBytes;
+    task.maxBuckets = plan.allowedBuckets;
+    db.__mutated = true;
+  }
+  return task.bucketPlan;
+}
+
+function cleanupExpiredAssignments(db, taskId) {
+  if (!db || !db.data) return;
+  const now = Date.now();
+  db.data.chunkAssignments = (db.data.chunkAssignments || []).filter((assignment) => {
+    if (taskId && assignment.taskId !== taskId) return true;
+    if (!assignment.expiresAt) return true;
+    const expires = typeof assignment.expiresAt === "number" ? assignment.expiresAt : Date.parse(assignment.expiresAt);
+    if (Number.isNaN(expires)) return true;
+    return expires > now;
+  });
+}
+
 function buildTaskResponse(task) {
   if (!task) return null;
   const base = `${task.baseUrl}/storage/${task.id}`;
@@ -83,23 +258,29 @@ function buildTaskResponse(task) {
     creatorId: task.creatorId || null,
     workerId: task.workerId || null,
     assignedWorkers: task.assignedWorkers || [],
+    maxBuckets: task.maxBuckets ?? null,
+    bucketSizeBytes: task.bucketSizeBytes ?? null,
+    totalBuckets: task.totalBuckets ?? null,
+    bucketTimeoutMs: task.bucketTimeoutMs ?? null,
     codeUrl: task.codeFileName ? `${base}/${task.codeFileName}` : undefined,
     dataUrl: task.dataFileName ? `${base}/${task.dataFileName}` : undefined,
   };
 }
 
 function computeProgress(task, db) {
-  if (!task.totalChunks || task.totalChunks <= 0) return task.progress || 0;
+  const totalUnits = task.totalBuckets || task.totalChunks;
+  if (!totalUnits || totalUnits <= 0) return task.progress || 0;
   const resultsArr = db.data.chunkResults || [];
   // treat completed, skipped and failed as processed for progress
   const finishedStatuses = new Set(["completed", "skipped", "failed"]);
   const processed = resultsArr.filter((r) => r.taskId === task.id && finishedStatuses.has(r.status)).length;
-  const progress = Math.min(100, Math.round((processed / task.totalChunks) * 100));
+  const progress = Math.min(100, Math.round((processed / totalUnits) * 100));
   task.processedChunks = processed;
   task.progress = progress;
   if (progress === 100 && task.status !== "completed") {
     task.status = "completed";
   }
+  task.totalChunks = totalUnits;
 }
 
 app.post(
@@ -112,7 +293,18 @@ app.post(
     try {
       const db = getDb();
       const taskId = req.taskId || nanoid();
-      const { name, capabilityRequired, creditCost, inputType, metadataJson, totalChunks, creatorId } = req.body;
+      const {
+        name,
+        capabilityRequired,
+        creditCost,
+        inputType,
+        metadataJson,
+        totalChunks,
+        creatorId,
+        maxBuckets,
+        bucketSizeBytes,
+        bucketTimeoutMs,
+      } = req.body;
       const trimmedName = typeof name === "string" ? name.trim() : "";
       if (!trimmedName) {
         return res.status(400).json({ error: "name is required" });
@@ -126,6 +318,9 @@ app.post(
       const codeFile = req.files.code[0];
       const dataFile = req.files.data ? req.files.data[0] : null;
       const taskDir = path.join(storageDir, taskId);
+      const maxBucketsNumber = maxBuckets ? Number(maxBuckets) : totalChunks ? Number(totalChunks) : null;
+      const bucketSizeNumber = bucketSizeBytes ? Number(bucketSizeBytes) : null;
+      const bucketTimeoutNumber = bucketTimeoutMs ? Number(bucketTimeoutMs) : null;
       const record = {
         id: taskId,
         name: trimmedName,
@@ -135,7 +330,11 @@ app.post(
         creditCost: Number(creditCost) || 0,
         inputType: inputType || "file",
         metadataJson: metadataJson || null,
-        totalChunks: totalChunks ? Number(totalChunks) : null,
+        totalChunks: maxBucketsNumber ? Number(maxBucketsNumber) : totalChunks ? Number(totalChunks) : null,
+        totalBuckets: null,
+        maxBuckets: maxBucketsNumber || null,
+        bucketSizeBytes: bucketSizeNumber || null,
+        bucketTimeoutMs: bucketTimeoutNumber || null,
         processedChunks: 0,
         progress: 0,
         createdAt: new Date().toISOString(),
