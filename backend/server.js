@@ -392,71 +392,73 @@ app.post("/api/tasks/:taskId/claim", (req, res) => {
   res.json({ task: buildTaskResponse(task) });
 });
 
-// Worker asks for the next available chunk to process for a task
+// Worker asks for the next available chunk (bucket) to process for a task
 app.post('/api/worker/next-chunk', (req, res) => {
   const { taskId, workerId } = req.body || {};
   if (!taskId || !workerId) return res.status(400).json({ error: 'taskId and workerId required' });
   const db = getDb();
   const task = db.data.tasks.find((t) => t.id === taskId);
   if (!task) return res.status(404).json({ error: 'Task not found' });
-  // ensure totalChunks known; try to read data.json if present
-  if (!task.totalChunks && task.dataFileName) {
-    try {
-      const dataPath = path.join(process.cwd(), 'backend', 'storage', task.id, task.dataFileName);
-      if (fs.existsSync(dataPath)) {
-        const content = fs.readFileSync(dataPath, 'utf8');
-        const parsed = JSON.parse(content);
-        if (Array.isArray(parsed)) {
-          task.totalChunks = parsed.length;
-        }
-      }
-    } catch (e) {
-      // ignore
+
+  cleanupExpiredAssignments(db, taskId);
+
+  const plan = ensureTaskBucketPlan(task, db);
+  if (!plan || !Array.isArray(plan.buckets) || plan.buckets.length === 0) {
+    if (db.__mutated) {
+      delete db.__mutated;
+      saveDb();
     }
-  }
-  if (!task.totalChunks || task.totalChunks <= 0) {
-    return res.status(400).json({ error: 'totalChunks not available for task' });
+    return res.json({ ok: false, message: 'no-bucket' });
   }
 
-  // compute already completed (or otherwise finished) and currently assigned indices
+  if (db.__mutated) {
+    delete db.__mutated;
+    saveDb();
+  }
+
   const finishedStatuses = new Set(["completed", "skipped", "failed"]);
-  const completed = new Set((db.data.chunkResults || []).filter(r => r.taskId === taskId && finishedStatuses.has(r.status)).map(r => r.chunkIndex));
-  const assigned = new Set((db.data.chunkAssignments || []).filter(a => a.taskId === taskId).map(a => a.chunkIndex));
-  // pick first available index
-  let chosen = null;
-  for (let i = 0; i < task.totalChunks; i++) {
-    if (!completed.has(i) && !assigned.has(i)) { chosen = i; break; }
-  }
-  if (chosen === null) return res.json({ ok: false, message: 'no-chunk' });
+  const completed = new Set((db.data.chunkResults || [])
+    .filter((r) => r.taskId === taskId && finishedStatuses.has(r.status))
+    .map((r) => r.chunkIndex));
+  const assigned = new Set((db.data.chunkAssignments || [])
+    .filter((a) => a.taskId === taskId)
+    .map((a) => a.chunkIndex));
 
-  // record assignment
-  db.data.chunkAssignments.push({ taskId, chunkIndex: chosen, workerId, assignedAt: new Date().toISOString() });
+  const availableBucket = plan.buckets.find((bucket) => !completed.has(bucket.index) && !assigned.has(bucket.index));
+  if (!availableBucket) {
+    return res.json({ ok: false, message: 'no-bucket' });
+  }
+
+  const expiresAtTs = Date.now() + (task.bucketTimeoutMs || DEFAULT_BUCKET_TIMEOUT_MS);
+  const assignment = {
+    taskId,
+    chunkIndex: availableBucket.index,
+    workerId,
+    assignedAt: new Date().toISOString(),
+    expiresAt: expiresAtTs,
+  };
+  db.data.chunkAssignments = db.data.chunkAssignments || [];
+  db.data.chunkAssignments.push(assignment);
+
   task.status = 'processing';
   task.assignedWorkers = task.assignedWorkers || [];
   if (!task.assignedWorkers.includes(workerId)) task.assignedWorkers.push(workerId);
-  saveDb();
 
-  // prepare chunk payload from data.json if available
-  let chunkData = null;
-  if (task.dataFileName) {
-    try {
-      const dataPath = path.join(process.cwd(), 'backend', 'storage', task.id, task.dataFileName);
-      if (fs.existsSync(dataPath)) {
-        const parsed = JSON.parse(fs.readFileSync(dataPath, 'utf8'));
-        if (Array.isArray(parsed)) {
-          const total = parsed.length;
-          const start = Math.floor((chosen * total) / task.totalChunks);
-          const end = Math.floor(((chosen + 1) * total) / task.totalChunks);
-          chunkData = parsed.slice(start, end);
-        }
-      }
-    } catch (e) {
-      // ignore
-    }
-  }
+  const items = getTaskDataSlice(task, availableBucket.itemStart, availableBucket.itemEnd);
+  const chunkData = {
+    items,
+    itemStart: availableBucket.itemStart,
+    itemEnd: availableBucket.itemEnd,
+    byteSize: availableBucket.byteSize,
+    bucketIndex: availableBucket.index,
+    totalBuckets: plan.buckets.length,
+    bucketSizeBytes: plan.bucketSizeBytes,
+    expiresAt: new Date(expiresAtTs).toISOString(),
+  };
 
   const taskResp = buildTaskResponse(task);
-  res.json({ ok: true, task: taskResp, chunkIndex: chosen, chunkData });
+  saveDb();
+  res.json({ ok: true, task: taskResp, chunkIndex: availableBucket.index, chunkData });
 });
 
 app.post('/api/worker/heartbeat', (req, res) => {
@@ -513,6 +515,11 @@ app.post("/api/worker/record-chunk", (req, res) => {
   // remove any existing assignment for this chunk (it is completed now)
   const assignIdx = db.data.chunkAssignments ? db.data.chunkAssignments.findIndex(a => a.taskId === taskId && a.chunkIndex === chunkIndex) : -1;
   if (assignIdx !== -1) db.data.chunkAssignments.splice(assignIdx, 1);
+
+  if (task.bucketPlan && task.bucketPlan.buckets && task.bucketPlan.buckets[chunkIndex]) {
+    task.bucketPlan.buckets[chunkIndex].status = status;
+    task.bucketPlan.buckets[chunkIndex].updatedAt = new Date().toISOString();
+  }
 
   const existing = db.data.chunkResults.find(
     (r) => r.taskId === taskId && r.chunkIndex === chunkIndex

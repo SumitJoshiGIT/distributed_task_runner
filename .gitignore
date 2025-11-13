@@ -5,7 +5,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
-storage/
+backend/storage/
+backend/node_modules
 
 # Environment variables
 .env
