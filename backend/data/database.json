@@ -1,0 +1,401 @@
+{
+  "tasks": [
+    {
+      "id": "3Iot8TLhB1oDnTARBW7iC",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-12T22:25:37.756Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    },
+    {
+      "id": "ZfOU9UnEFoDV2bkud0ROx",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-12T22:27:42.045Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    },
+    {
+      "id": "7LFCik75jVKqhAdhM_x_E",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-12T22:29:23.950Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    },
+    {
+      "id": "3DHRkPp5KZh-pJEv8sLz5",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-12T22:30:50.268Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    },
+    {
+      "id": "HP9dFoldQRhPD6TijxmOX",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-13T05:17:35.581Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    },
+    {
+      "id": "Koah2Dej3eW1PwL4VB9xx",
+      "name": "HueHueHue",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-13T05:40:55.276Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    },
+    {
+      "id": "MqDU6PyWv_wnUH6s6nvHA",
+      "name": "Task",
+      "status": "completed",
+      "creatorId": "s_mhwh1nl4_zosmxg",
+      "capabilityRequired": "image-processing",
+      "creditCost": 10,
+      "inputType": "file",
+      "metadataJson": null,
+      "totalChunks": 4,
+      "processedChunks": 4,
+      "progress": 100,
+      "createdAt": "2025-11-13T06:16:44.849Z",
+      "result": null,
+      "codeFileName": "code.zip",
+      "dataFileName": "data.json",
+      "baseUrl": "http://localhost:4000",
+      "assignedWorkers": [
+        "s_mhwh1nl4_zosmxg"
+      ]
+    }
+  ],
+  "chunkResults": [
+    {
+      "id": "w-cCZghkeTJl04ZxFE_gA",
+      "taskId": "3Iot8TLhB1oDnTARBW7iC",
+      "chunkIndex": 0,
+      "status": "skipped",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] Skipped (no main.js)",
+      "createdAt": "2025-11-12T22:25:52.314Z",
+      "updatedAt": "2025-11-12T22:25:52.314Z"
+    },
+    {
+      "id": "LKRqEd764t0E8jGaB_-bO",
+      "taskId": "3Iot8TLhB1oDnTARBW7iC",
+      "chunkIndex": 1,
+      "status": "skipped",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] Skipped (no main.js)",
+      "createdAt": "2025-11-12T22:25:52.531Z",
+      "updatedAt": "2025-11-12T22:25:52.531Z"
+    },
+    {
+      "id": "nZMm6ORiBEd-cy6LRtKq-",
+      "taskId": "3Iot8TLhB1oDnTARBW7iC",
+      "chunkIndex": 2,
+      "status": "skipped",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] Skipped (no main.js)",
+      "createdAt": "2025-11-12T22:25:52.745Z",
+      "updatedAt": "2025-11-12T22:25:52.745Z"
+    },
+    {
+      "id": "cTtLbEJ7RdY1WJrZ_8ZEq",
+      "taskId": "3Iot8TLhB1oDnTARBW7iC",
+      "chunkIndex": 3,
+      "status": "skipped",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] Skipped (no main.js)",
+      "createdAt": "2025-11-12T22:25:52.957Z",
+      "updatedAt": "2025-11-12T22:25:52.957Z"
+    },
+    {
+      "id": "sF8ub0bOedEqcyeLIh49y",
+      "taskId": "ZfOU9UnEFoDV2bkud0ROx",
+      "chunkIndex": 0,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] No data.json found",
+      "createdAt": "2025-11-12T22:27:53.544Z",
+      "updatedAt": "2025-11-12T22:27:53.544Z"
+    },
+    {
+      "id": "arx_kZb8XtzWfbq-cGN1R",
+      "taskId": "ZfOU9UnEFoDV2bkud0ROx",
+      "chunkIndex": 1,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] No data.json found",
+      "createdAt": "2025-11-12T22:27:53.797Z",
+      "updatedAt": "2025-11-12T22:27:53.797Z"
+    },
+    {
+      "id": "ywgAPey2qmI_BHnyR60YM",
+      "taskId": "ZfOU9UnEFoDV2bkud0ROx",
+      "chunkIndex": 2,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] No data.json found",
+      "createdAt": "2025-11-12T22:27:54.028Z",
+      "updatedAt": "2025-11-12T22:27:54.028Z"
+    },
+    {
+      "id": "osey37tnGrsF_rYIOTZB1",
+      "taskId": "ZfOU9UnEFoDV2bkud0ROx",
+      "chunkIndex": 3,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] No data.json found",
+      "createdAt": "2025-11-12T22:27:54.278Z",
+      "updatedAt": "2025-11-12T22:27:54.278Z"
+    },
+    {
+      "id": "5OD8eRKFhTj8e8YFxc5tM",
+      "taskId": "7LFCik75jVKqhAdhM_x_E",
+      "chunkIndex": 0,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:30:01.155Z",
+      "updatedAt": "2025-11-12T22:30:01.155Z"
+    },
+    {
+      "id": "7JDiVkJO0Meq9TYiQ9IvW",
+      "taskId": "7LFCik75jVKqhAdhM_x_E",
+      "chunkIndex": 1,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:30:01.400Z",
+      "updatedAt": "2025-11-12T22:30:01.400Z"
+    },
+    {
+      "id": "0J2syZS4hbb1xARIggvwZ",
+      "taskId": "7LFCik75jVKqhAdhM_x_E",
+      "chunkIndex": 2,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:30:01.646Z",
+      "updatedAt": "2025-11-12T22:30:01.646Z"
+    },
+    {
+      "id": "TTmdioda59L6cUK53UNKc",
+      "taskId": "7LFCik75jVKqhAdhM_x_E",
+      "chunkIndex": 3,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:30:01.899Z",
+      "updatedAt": "2025-11-12T22:30:01.899Z"
+    },
+    {
+      "id": "ISEmkfUaYnbCF1Dkl5pQ3",
+      "taskId": "3DHRkPp5KZh-pJEv8sLz5",
+      "chunkIndex": 0,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:31:02.284Z",
+      "updatedAt": "2025-11-12T22:31:02.284Z"
+    },
+    {
+      "id": "BvabDk4x4jR-PHSbNuBYL",
+      "taskId": "3DHRkPp5KZh-pJEv8sLz5",
+      "chunkIndex": 1,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:31:02.528Z",
+      "updatedAt": "2025-11-12T22:31:02.528Z"
+    },
+    {
+      "id": "3BVVWHhrNrDJYhkvz8c28",
+      "taskId": "3DHRkPp5KZh-pJEv8sLz5",
+      "chunkIndex": 2,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:31:02.765Z",
+      "updatedAt": "2025-11-12T22:31:02.765Z"
+    },
+    {
+      "id": "6O2hYbNrwUxV7-jwnUeQ-",
+      "taskId": "3DHRkPp5KZh-pJEv8sLz5",
+      "chunkIndex": 3,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-12T22:31:03.005Z",
+      "updatedAt": "2025-11-12T22:31:03.005Z"
+    },
+    {
+      "id": "US3GSHWKICL5snrPSSt4T",
+      "taskId": "HP9dFoldQRhPD6TijxmOX",
+      "chunkIndex": 0,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:17:45.260Z",
+      "updatedAt": "2025-11-13T05:17:45.260Z"
+    },
+    {
+      "id": "jarEf5CEqkGmHYh_lrsPg",
+      "taskId": "HP9dFoldQRhPD6TijxmOX",
+      "chunkIndex": 1,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:17:45.491Z",
+      "updatedAt": "2025-11-13T05:17:45.491Z"
+    },
+    {
+      "id": "y0_ElzthQyuY7lv8KJDFf",
+      "taskId": "HP9dFoldQRhPD6TijxmOX",
+      "chunkIndex": 2,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:17:45.719Z",
+      "updatedAt": "2025-11-13T05:17:45.719Z"
+    },
+    {
+      "id": "6NFBM1QpcSj7QsJVhIwOP",
+      "taskId": "HP9dFoldQRhPD6TijxmOX",
+      "chunkIndex": 3,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:17:45.948Z",
+      "updatedAt": "2025-11-13T05:17:45.948Z"
+    },
+    {
+      "id": "k7KOjBv027iU9TX7zx8z9",
+      "taskId": "Koah2Dej3eW1PwL4VB9xx",
+      "chunkIndex": 0,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:41:08.402Z",
+      "updatedAt": "2025-11-13T05:41:08.402Z"
+    },
+    {
+      "id": "-Fx5-kWW1L9WG8X5xOu8D",
+      "taskId": "Koah2Dej3eW1PwL4VB9xx",
+      "chunkIndex": 1,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:41:08.631Z",
+      "updatedAt": "2025-11-13T05:41:08.631Z"
+    },
+    {
+      "id": "e00H9o_uv_qIS9xujUZ2_",
+      "taskId": "Koah2Dej3eW1PwL4VB9xx",
+      "chunkIndex": 2,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:41:08.862Z",
+      "updatedAt": "2025-11-13T05:41:08.862Z"
+    },
+    {
+      "id": "u0XpXpClF4kta1176jbVp",
+      "taskId": "Koah2Dej3eW1PwL4VB9xx",
+      "chunkIndex": 3,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T05:41:09.093Z",
+      "updatedAt": "2025-11-13T05:41:09.093Z"
+    },
+    {
+      "id": "XM3h-072duVCmtBRCUyX6",
+      "taskId": "MqDU6PyWv_wnUH6s6nvHA",
+      "chunkIndex": 0,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":1,\"name\":\"Alice\",\"score\":84,\"tags\":[\"a\",\"b\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T06:17:44.624Z",
+      "updatedAt": "2025-11-13T06:17:44.624Z"
+    },
+    {
+      "id": "yIj3-kesCpED0JjsOi3zl",
+      "taskId": "MqDU6PyWv_wnUH6s6nvHA",
+      "chunkIndex": 1,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":2,\"name\":\"Bob\",\"score\":92,\"tags\":[\"a\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T06:17:44.857Z",
+      "updatedAt": "2025-11-13T06:17:44.857Z"
+    },
+    {
+      "id": "CCYcX_eppatnPLCPX4L--",
+      "taskId": "MqDU6PyWv_wnUH6s6nvHA",
+      "chunkIndex": 2,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":3,\"name\":\"Carol\",\"score\":77,\"tags\":[\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T06:17:45.088Z",
+      "updatedAt": "2025-11-13T06:17:45.088Z"
+    },
+    {
+      "id": "CsVEXpUq_zLdg9ESZDyCP",
+      "taskId": "MqDU6PyWv_wnUH6s6nvHA",
+      "chunkIndex": 3,
+      "status": "completed",
+      "resultText": "[input] [{\"id\":4,\"name\":\"Dave\",\"score\":88,\"tags\":[\"b\",\"c\"]}]\n[output] Processed 4 item(s). Keys observed: id, name, score, tags",
+      "createdAt": "2025-11-13T06:17:45.321Z",
+      "updatedAt": "2025-11-13T06:17:45.321Z"
+    }
+  ],
+  "chunkAssignments": []
+}

@@ -1,0 +1,41 @@
+{
+  "name": "shifted-project",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev:frontend": "vite --config vite.config.ts --open",
+    "dev:backend": "nodemon --watch backend --ignore backend/data backend/server.js",
+    "build": "vite build",
+    "lint": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "lowdb": "^7.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nanoid": "^5.0.7",
+    "node-fetch": "^3.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sonner": "^2.0.3",
+    "tailwind-merge": "^3.1.0",
+    "unzipper": "^0.10.11"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^22.13.10",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.3.4",
+    "nodemon": "^3.1.7",
+    "npm-run-all": "^4.1.5",
+    "typescript": "~5.7.2",
+    "vite": "^6.4.1"
+  }
+}

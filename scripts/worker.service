@@ -1,0 +1,18 @@
+[Unit]
+Description=Shifted Project Worker Service
+After=network.target
+
+[Service]
+Type=simple
+Environment=WORKER_ID=worker-%%i
+Environment=API_BASE=http://localhost:4000
+ExecStart=/usr/bin/node /home/sumit/Downloads/real-time_distributed_task_network\ \(1\)/shifted_project/scripts/worker-runner.mjs
+Restart=always
+User=%i
+
+[Install]
+WantedBy=multi-user.target
+
+# Usage:
+# 1. Copy this file to /etc/systemd/system/worker@.service
+# 2. Enable and start a worker instance for your user: sudo systemctl enable --now worker@youruser

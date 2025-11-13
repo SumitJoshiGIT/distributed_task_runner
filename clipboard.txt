@@ -1,0 +1,36 @@
+
+Retrying request (attempt 3/6)...
+11/13/2025, 1:35:50 AM [CONVEX M(auth:store)] [INFO] '`auth:store` type: refreshSession'
+11/13/2025, 1:36:01 AM [CONVEX M(auth:store)] [INFO] '`auth:store` type: refreshSession'
+^C
+❯ WORKER_TOKEN=dev-worker-token node scripts/worker-runner.mjs --task ofuqyjJTym-lvPDs2QyNo --chunk-size 1 --verbose --base http://localhost:4000
+[runner] Using BASE=http://localhost:4000
+[runner] Fetching task info for ofuqyjJTym-lvPDs2QyNo ...
+[runner] Task info: {
+  taskId: 'ofuqyjJTym-lvPDs2QyNo',
+  status: 'processing',
+  totalChunks: null,
+  processedChunks: 0,
+  capabilityRequired: 'image-processing',
+  creditCost: 10,
+  inputType: 'file',
+  metadataJson: null,
+  codeUrl: 'http://localhost:4000/storage/ofuqyjJTym-lvPDs2QyNo/code.zip',
+  dataUrl: 'http://localhost:4000/storage/ofuqyjJTym-lvPDs2QyNo/data.json'
+}
+[runner] codeUrl detected. Attempting to fetch headers...
+[runner] codeUrl: status=200 content-length=1315 content-type=application/zip
+[runner] codeUrl first 4 bytes (hex) = 50 4b 03 04 (zip)
+[runner] Unzipped code to: /tmp/tasknet-code-UV8cZ4
+[runner] Using entry: /tmp/tasknet-code-UV8cZ4/code_task/main.js
+[runner] dataUrl detected. Fetching a small sample...
+[runner] dataUrl status=200, preview: [
+  { "id": 1, "name": "Alice", "score": 84, "tags": ["a", "b"] },
+  { "id": 2, "name": "Bob", "score": 92, "tags": ["a"
+[runner] Total chunks = 4
+[runner] Initialized totalChunks on task
+[runner] Processing chunk 1/4 ... done
+[runner] Processing chunk 2/4 ... done
+[runner] Processing chunk 3/4 ... done
+[runner] Processing chunk 4/4 ... done
+[runner] All chunks reported. Task will auto-complete if no failures.

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "outDir": "dist/server",
+    "types": ["node"]
+  },
+  "include": ["backend/**/*.ts"],
+  "exclude": ["node_modules"]
+}
