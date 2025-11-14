@@ -5,7 +5,7 @@
   - Claims a task with WORKER_ID
   - Downloads code.zip and data.json if present
   - Extracts code.zip and runs `node main.js` inside the extracted folder
-  - If data.json is an array, posts one chunk result per item to /api/worker/record-chunk
+  - If data.json is an array, posts one bucket result per item batch to /api/worker/record-chunk
 
   Usage:
     WORKER_ID=my-worker-1 API_BASE=http://localhost:4000 node scripts/worker-runner.mjs
@@ -25,8 +25,73 @@ const WORKER_ID = process.env.WORKER_ID || process.env.WORKER_TOKEN || 'dev-work
 const API_BASE = process.env.API_BASE || 'http://localhost:4000';
 const POLL_INTERVAL = Number(process.env.POLL_INTERVAL) || 4000;
 const HEARTBEAT_INTERVAL = Number(process.env.HEARTBEAT_INTERVAL) || 5000;
+const ITEM_PREVIEW_LIMIT = Number(process.env.ITEM_PREVIEW_LIMIT) || 200;
+const SUMMARY_PREVIEW_LIMIT = Number(process.env.ITEM_SUMMARY_LIMIT) || 20;
+const PROGRESS_BATCH_SIZE = Number(process.env.PROGRESS_BATCH_SIZE) || 5;
+const NO_CHUNK_BACKOFF_MS = Number(process.env.NO_CHUNK_BACKOFF_MS) || Math.min(POLL_INTERVAL, 1500);
+const NO_CHUNK_MAX_RETRIES = Number.isFinite(Number(process.env.NO_CHUNK_MAX_RETRIES))
+  ? Math.max(1, Number(process.env.NO_CHUNK_MAX_RETRIES))
+  : 12;
 
 function log(...args) { console.log(new Date().toISOString(), '[worker]', ...args); }
+
+function safeStringify(value) {
+  try {
+    if (typeof value === 'string') return value;
+    return JSON.stringify(value);
+  } catch (error) {
+    return String(value);
+  }
+}
+
+function previewValue(value, limit = ITEM_PREVIEW_LIMIT) {
+  const raw = safeStringify(value) || '';
+  if (raw.length <= limit) return raw;
+  return `${raw.slice(0, limit)}... (+${raw.length - limit} chars)`;
+}
+
+function summarizeItemResults(items) {
+  if (!Array.isArray(items) || items.length === 0) {
+    return {
+      inputLines: ['(no chunk items)'],
+      outputLines: ['(no output)'],
+    };
+  }
+  const limited = items.slice(0, SUMMARY_PREVIEW_LIMIT);
+  const buildLabel = (item, idx) => {
+    if (Number.isFinite(item.globalIndex)) {
+      return `#${item.globalIndex}`;
+    }
+    return `item ${Number.isFinite(item.localIndex) ? item.localIndex : idx}`;
+  };
+  const inputLines = limited.map((item, idx) => `${buildLabel(item, idx)}: ${item.inputPreview || ''}`.trim());
+  const outputLines = limited.map((item, idx) => {
+    const base = item.status === 'failed' ? (item.error || item.output || 'failed') : (item.output || 'completed');
+    return `${buildLabel(item, idx)}: ${base}`.trim();
+  });
+  if (items.length > SUMMARY_PREVIEW_LIMIT) {
+    const remaining = items.length - SUMMARY_PREVIEW_LIMIT;
+    inputLines.push(`...(and ${remaining} more)`);
+    outputLines.push(`...(and ${remaining} more)`);
+  }
+  return { inputLines, outputLines };
+}
+
+async function recordProgressUpdate(payload) {
+  try {
+    const res = await fetch(`${API_BASE}/api/worker/record-progress`, {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const body = await res.text();
+      log('record-progress failed', res.status, body.slice(0, 200));
+    }
+  } catch (error) {
+    log('record-progress error', error.message);
+  }
+}
 
 async function sendHeartbeat() {
   try {
@@ -70,8 +135,29 @@ async function listAssignedTasks() {
   const res = await fetch(`${API_BASE}/api/tasks`);
   if (!res.ok) throw new Error(await res.text());
   const json = await res.json();
-  const tasks = json.tasks || [];
-  return tasks.filter((t) => (t.assignedWorkers || []).includes(WORKER_ID) && t.status !== 'completed');
+  const tasks = (json.tasks || []).map((task) => {
+    const fallbackCost = Number(task.creditCost) || Number(task.costPerChunk) || 1;
+    const costPerChunk = Number.isFinite(Number(task.costPerChunk)) ? Number(task.costPerChunk) : fallbackCost;
+    const budgetTotal = Number.isFinite(Number(task.budgetTotal)) ? Number(task.budgetTotal) : costPerChunk;
+    const budgetSpent = Number.isFinite(Number(task.budgetSpent)) ? Number(task.budgetSpent) : 0;
+    const maxBillableChunks = Number.isFinite(Number(task.maxBillableChunks))
+      ? Number(task.maxBillableChunks)
+      : Number(task.totalChunks) || 1;
+    const chunksPaid = Number.isFinite(Number(task.chunksPaid)) ? Number(task.chunksPaid) : 0;
+    const remainingBudget = Math.max(0, budgetTotal - budgetSpent);
+    const remainingChunks = Math.max(0, maxBillableChunks - chunksPaid);
+    return {
+      ...task,
+      costPerChunk,
+      budgetTotal,
+      budgetSpent,
+      maxBillableChunks,
+      chunksPaid,
+      remainingBudget,
+      remainingChunks,
+    };
+  });
+  return tasks.filter((t) => (t.assignedWorkers || []).includes(WORKER_ID) && t.status !== 'completed' && t.remainingChunks > 0 && t.remainingBudget >= t.costPerChunk);
 }
 
 async function downloadFile(url, dest) {
@@ -83,13 +169,17 @@ async function downloadFile(url, dest) {
 
 async function processTask(task) {
   log('processing', task.id);
-  const taskBase = `${API_BASE}/storage/${task.id}`;
+  const storageId = task.storageId || task.id;
+  const taskBase = storageId ? `${API_BASE}/storage/${storageId}` : null;
   const tmp = fs.mkdtempSync(path.join(os.tmpdir(), `worker-${task.id}-`));
   let downloadedDataPath = null;
   try {
     // download code.zip if present
     if (task.codeFileName) {
-      const url = `${taskBase}/${task.codeFileName}`;
+      const url = task.codeUrl || (taskBase ? `${taskBase}/${task.codeFileName}` : null);
+      if (!url) {
+        throw new Error('code.zip URL unavailable for task');
+      }
       const codeZip = path.join(tmp, 'code.zip');
       log('download code', url);
       await downloadFile(url, codeZip);
@@ -99,10 +189,13 @@ async function processTask(task) {
 
     // download data.json if present (worker may still request chunked data from server)
     if (task.dataFileName) {
-      const url = `${taskBase}/${task.dataFileName}`;
+      const url = task.dataUrl || (taskBase ? `${taskBase}/${task.dataFileName}` : null);
       const dataDest = path.join(tmp, 'data.json');
-      log('download data (for reference)', url);
+      if (url) {
+        log('download data (for reference)', url);
+      }
       try {
+        if (!url) throw new Error('data.json URL unavailable for task');
         await downloadFile(url, dataDest);
         downloadedDataPath = dataDest;
       } catch (e) {
@@ -146,6 +239,7 @@ async function processTask(task) {
     }
 
     // repeatedly request next chunk assignment from the server and process it
+    let idleIterations = 0;
     while (true) {
       try {
         const nextRes = await fetch(`${API_BASE}/api/worker/next-chunk`, {
@@ -160,59 +254,212 @@ async function processTask(task) {
         }
         const nextJson = await nextRes.json();
         if (!nextJson.ok) {
-          // no chunk available right now
+          const rawMessage = typeof nextJson.message === 'string' ? nextJson.message : '';
+          const normalizedMessage = rawMessage.toLowerCase();
+          if (normalizedMessage === 'no-chunk' || normalizedMessage === 'no-chunks') {
+            idleIterations += 1;
+            if (idleIterations >= NO_CHUNK_MAX_RETRIES) {
+              log('no chunks available after multiple retries', task.id, '- pausing');
+              break;
+            }
+            await new Promise((resolve) => setTimeout(resolve, NO_CHUNK_BACKOFF_MS));
+            continue;
+          }
+          if (normalizedMessage === 'not-assigned') {
+            log('worker no longer assigned to task', task.id, '- stopping processing');
+            break;
+          }
+          if (normalizedMessage === 'revoked') {
+            log('task temporarily revoked by customer', task.id, '- pausing');
+            break;
+          }
+          if (normalizedMessage === 'budget-exhausted' || normalizedMessage === 'insufficient-funds') {
+            log('task cannot allocate more chunks', task.id, '-', rawMessage);
+            break;
+          }
+          log('next-chunk unavailable', rawMessage || 'unknown reason');
           break;
         }
+        idleIterations = 0;
         const idx = nextJson.chunkIndex;
-        const chunkData = nextJson.chunkData;
-        // run main.js per-chunk if present (optional)
-        let statusToSend = 'skipped';
-        let resultText = chunkData ? `[input] ${JSON.stringify(chunkData)}\n[output] Skipped (no main.js)` : `[input] -\n[output] Skipped (no main.js)`;
-        if (hasMain) {
-          // write chunk to chunk.json for the main to consume
-          try { fs.writeFileSync(path.join(mainCwd, 'chunk.json'), JSON.stringify(chunkData)); } catch (e) {}
-          let stdoutBuf = '';
-          let stderrBuf = '';
-          try {
-            log('running main.js for chunk', idx);
-            await new Promise((resolve, reject) => {
-              const cp = spawn('node', [main], {
-                cwd: mainCwd,
-                env: { ...process.env, TASK_ID: task.id, API_BASE, CHUNK_INDEX: String(idx) }
-              });
-              cp.stdout.on('data', d => {
-                stdoutBuf += d.toString();
-                process.stdout.write(`[task ${task.id}] ` + d);
-              });
-              cp.stderr.on('data', d => {
-                stderrBuf += d.toString();
-                process.stderr.write(`[task ${task.id}] ERR ` + d);
-              });
-              cp.on('close', code => {
-                if (code === 0) resolve(); else reject(new Error(`main.js exited ${code}`));
-              });
-            });
-            statusToSend = 'completed';
-            const outputText = stdoutBuf.trim() || `Processed chunk ${idx}`;
-            resultText = chunkData ? `[input] ${JSON.stringify(chunkData)}\n[output] ${outputText}` : `[input] -\n[output] ${outputText}`;
-          } catch (e) {
-            statusToSend = 'failed';
-            const errorText = (stderrBuf.trim() || e.message || 'Unknown error');
-            resultText = chunkData ? `[input] ${JSON.stringify(chunkData)}\n[output] Failed: ${errorText}` : `[input] -\n[output] Failed: ${errorText}`;
-            log('main.js chunk run failed', e.message);
+        const rawChunkData = nextJson.chunkData;
+        const rangeStart = typeof nextJson.rangeStart === 'number' ? nextJson.rangeStart : null;
+        const rangeEnd = typeof nextJson.rangeEnd === 'number' ? nextJson.rangeEnd : null;
+        const bucketBytes = typeof nextJson.bucketBytes === 'number' ? nextJson.bucketBytes : null;
+        const chunkItems = Array.isArray(rawChunkData)
+          ? rawChunkData
+          : (rawChunkData !== undefined && rawChunkData !== null ? [rawChunkData] : []);
+        const rangeItemCount = (rangeStart !== null && rangeEnd !== null) ? Math.max(0, rangeEnd - rangeStart) : null;
+        const itemsCount = Number.isFinite(nextJson.itemsCount)
+          ? nextJson.itemsCount
+          : rangeItemCount !== null
+          ? rangeItemCount
+          : chunkItems.length;
+        const totalItems = Number.isFinite(itemsCount) ? itemsCount : chunkItems.length;
+
+        const itemResults = [];
+        let completedCount = 0;
+        let failedCount = 0;
+        let skippedCount = 0;
+
+        const progressBuffer = [];
+        const flushProgress = async (force = false) => {
+          if (progressBuffer.length === 0) return;
+          if (!force && progressBuffer.length < PROGRESS_BATCH_SIZE) return;
+          const first = progressBuffer[0];
+          const fallbackOffset = itemResults.length - progressBuffer.length;
+          const batchOffset = Number.isFinite(first?.localIndex)
+            ? first.localIndex
+            : Math.max(0, fallbackOffset);
+          const safeProcessedCount = Number.isFinite(totalItems)
+            ? Math.min(itemResults.length, totalItems)
+            : itemResults.length;
+          await recordProgressUpdate({
+            taskId: task.id,
+            chunkIndex: idx,
+            workerId: WORKER_ID,
+            rangeStart,
+            itemsProcessed: safeProcessedCount,
+            totalItems,
+            bytesUsed: bucketBytes,
+            batchOffset,
+            batchSize: progressBuffer.length,
+            items: progressBuffer.map((entry) => ({ ...entry })),
+          });
+          progressBuffer.length = 0;
+        };
+
+        if (chunkItems.length === 0) {
+          itemResults.push({
+            localIndex: 0,
+            globalIndex: rangeStart,
+            status: 'skipped',
+            inputPreview: '(empty bucket)',
+            output: 'No items to process',
+            error: null,
+          });
+          skippedCount = 1;
+        } else {
+          for (let itemOffset = 0; itemOffset < chunkItems.length; itemOffset++) {
+            const chunkItem = chunkItems[itemOffset];
+            const globalIndex = rangeStart !== null ? rangeStart + itemOffset : null;
+            const inputPreview = previewValue(chunkItem);
+            let itemStatus = hasMain ? 'completed' : 'skipped';
+            let outputText = hasMain ? '' : 'Skipped (no main.js)';
+            let errorText = null;
+
+            if (hasMain) {
+              const chunkPath = path.join(mainCwd, 'chunk.json');
+              try {
+                fs.writeFileSync(chunkPath, JSON.stringify(chunkItem));
+              } catch (error) {
+                log('failed to write chunk.json', error.message);
+              }
+              let stdoutBuf = '';
+              let stderrBuf = '';
+              try {
+                log('running main.js for bucket item', `${idx}:${itemOffset}`);
+                await new Promise((resolve, reject) => {
+                  const cp = spawn('node', [main], {
+                    cwd: mainCwd,
+                    env: {
+                      ...process.env,
+                      TASK_ID: task.id,
+                      API_BASE,
+                      CHUNK_INDEX: String(idx),
+                      CHUNK_ITEM_INDEX: String(itemOffset),
+                      CHUNK_GLOBAL_INDEX: globalIndex !== null ? String(globalIndex) : '',
+                      CHUNK_ITEMS_TOTAL: String(chunkItems.length),
+                    },
+                  });
+                  cp.stdout.on('data', (d) => {
+                    stdoutBuf += d.toString();
+                    process.stdout.write(`[task ${task.id}] ` + d);
+                  });
+                  cp.stderr.on('data', (d) => {
+                    stderrBuf += d.toString();
+                    process.stderr.write(`[task ${task.id}] ERR ` + d);
+                  });
+                  cp.on('close', (code) => {
+                    if (code === 0) resolve(); else reject(new Error(`main.js exited ${code}`));
+                  });
+                });
+                outputText = stdoutBuf.trim() || `Processed bucket item ${globalIndex ?? itemOffset}`;
+              } catch (error) {
+                itemStatus = 'failed';
+                const stderrText = stderrBuf.trim();
+                errorText = (stderrText && stderrText.length > 0) ? stderrText : (error.message || 'Unknown error');
+                outputText = `Failed: ${errorText}`;
+                log('main.js bucket item run failed', error.message);
+              }
+            }
+
+            if (itemStatus === 'completed') completedCount += 1;
+            else if (itemStatus === 'failed') failedCount += 1;
+            else skippedCount += 1;
+
+            const itemResult = {
+              localIndex: itemOffset,
+              globalIndex,
+              status: itemStatus,
+              inputPreview,
+              output: outputText,
+              error: errorText,
+            };
+
+            itemResults.push(itemResult);
+            progressBuffer.push({ ...itemResult });
+
+            const shouldForceFlush = progressBuffer.length >= PROGRESS_BATCH_SIZE || itemOffset === chunkItems.length - 1;
+            await flushProgress(shouldForceFlush);
           }
+        }
+
+        await flushProgress(true);
+
+        const statusToSend = failedCount > 0
+          ? 'failed'
+          : completedCount > 0
+          ? 'completed'
+          : 'skipped';
+
+        const summaryText = hasMain
+          ? `Processed ${completedCount}/${totalItems} item(s). Failures: ${failedCount}.`
+          : `Skipped ${totalItems} item(s). Worker missing main.js.`;
+
+        const { inputLines, outputLines } = summarizeItemResults(itemResults);
+        const resultText = `[input]\n${inputLines.join('\n')}\n[output]\n${outputLines.join('\n')}`;
+
+        const resultPayload = {
+          taskId: task.id,
+          chunkIndex: idx,
+          rangeStart,
+          rangeEnd,
+          itemsCount: Number.isFinite(itemsCount) ? itemsCount : chunkItems.length,
+          bytesUsed: bucketBytes,
+          status: statusToSend,
+          resultText,
+          output: summaryText,
+          itemResults,
+          itemResultsTotal: Number.isFinite(itemsCount) ? itemsCount : chunkItems.length,
+          processedItems: Number.isFinite(totalItems) ? Math.min(itemResults.length, totalItems) : itemResults.length,
+          workerId: WORKER_ID,
+        };
+        if (failedCount > 0) {
+          const firstError = itemResults.find((item) => item.status === 'failed' && item.error);
+          if (firstError?.error) resultPayload.error = firstError.error;
         }
         const recordRes = await fetch(`${API_BASE}/api/worker/record-chunk`, {
           method: 'POST',
           headers: { 'content-type': 'application/json' },
-          body: JSON.stringify({ taskId: task.id, chunkIndex: idx, status: statusToSend, resultText }),
+          body: JSON.stringify(resultPayload),
         });
         if (!recordRes.ok) {
           const body = await recordRes.text();
-          log('record-chunk failed', recordRes.status, body);
+          log('record-bucket failed', recordRes.status, body);
           break;
         }
-        log('posted chunk', idx, statusToSend);
+        log('posted bucket', idx, statusToSend, `(${completedCount} completed, ${failedCount} failed, ${skippedCount} skipped)`);
         // small pause to avoid tight loop
         await new Promise(r => setTimeout(r, 200));
       } catch (e) {

@@ -1,0 +1,122 @@
+[
+  {
+    "ticketId": "SUP-1001",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4483",
+    "description": "Finance reports recurring failures when attempting to pay invoice 4483 through the customer portal.",
+    "tags": ["billing", "payment", "portal"],
+    "createdAt": "2025-03-15T09:20:00Z"
+  },
+  {
+    "ticketId": "SUP-1002",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job",
+    "description": "Weekly export to S3 took 4 hours longer than usual. Need to confirm if there were platform issues.",
+    "tags": ["performance", "export"],
+    "createdAt": "2025-03-16T11:05:00Z"
+  },
+  {
+    "ticketId": "SUP-1003",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Production outage in EU region",
+    "description": "Users in the EU data center cannot authenticate. Outage began roughly 15 minutes ago.",
+    "tags": ["outage", "auth", "eu"],
+    "createdAt": "2025-03-16T11:22:00Z"
+  },
+  {
+    "ticketId": "SUP-1004",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary",
+    "description": "Requesting a button to export a weekly summary PDF from the dashboard.",
+    "tags": ["feature", "export"],
+    "createdAt": "2025-03-17T07:42:00Z"
+  },
+  {
+    "ticketId": "SUP-1005",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports",
+    "description": "Dashboards display Pacific time even though tenant is configured for UTC.",
+    "tags": ["bug", "reports", "timezone"],
+    "createdAt": "2025-03-17T14:18:00Z"
+  },
+  {
+    "ticketId": "SUP-1006",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted",
+    "description": "The shipment.created webhook stopped retrying after three attempts even though we responded with 503.",
+    "tags": ["webhooks", "reliability"],
+    "createdAt": "2025-03-18T08:03:00Z"
+  },
+  {
+    "ticketId": "SUP-1007",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed",
+    "description": "Security shared CVE-2025-1184 affecting OpenSSL. Need mitigation guidance for managed clusters.",
+    "tags": ["security", "cve", "openssl"],
+    "createdAt": "2025-03-18T10:31:00Z"
+  },
+  {
+    "ticketId": "SUP-1008",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Onboarding checklist",
+    "description": "Looking for a best practices checklist to onboard a new campus.",
+    "tags": ["documentation", "onboarding"],
+    "createdAt": "2025-03-18T13:55:00Z"
+  },
+  {
+    "ticketId": "SUP-1009",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "API throttle warnings",
+    "description": "API responded with X-RateLimit-Remaining: 0 during nightly batch. Are we able to raise the burst limit?",
+    "tags": ["api", "rate-limit"],
+    "createdAt": "2025-03-18T21:12:00Z"
+  },
+  {
+    "ticketId": "SUP-1010",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins",
+    "description": "Administrators receive an invalid token error when approving MFA push notifications.",
+    "tags": ["security", "mfa"],
+    "createdAt": "2025-03-19T05:48:00Z"
+  },
+  {
+    "ticketId": "SUP-1011",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Brand assets update",
+    "description": "Marketing uploaded new logos and would like guidance on updating the theme.",
+    "tags": ["branding", "support"],
+    "createdAt": "2025-03-19T09:02:00Z"
+  },
+  {
+    "ticketId": "SUP-1012",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "HIPAA audit assistance",
+    "description": "Compliance team is onsite and needs system access logs for the last 60 days within the hour.",
+    "tags": ["compliance", "audit", "logs"],
+    "createdAt": "2025-03-19T10:15:00Z"
+  }
+]
