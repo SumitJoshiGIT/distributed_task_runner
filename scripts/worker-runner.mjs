@@ -84,12 +84,20 @@ async function recordProgressUpdate(payload) {
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(payload),
     });
+    if (res.status === 404) {
+      const body = await res.text();
+      log('record-progress failed', res.status, body.slice(0, 200));
+      return { ok: false, fatal: 'task-not-found' };
+    }
     if (!res.ok) {
       const body = await res.text();
       log('record-progress failed', res.status, body.slice(0, 200));
+      return { ok: false };
     }
+    return { ok: true };
   } catch (error) {
     log('record-progress error', error.message);
+    return { ok: false };
   }
 }
 
@@ -241,6 +249,8 @@ async function processTask(task) {
     // repeatedly request next chunk assignment from the server and process it
     let idleIterations = 0;
     while (true) {
+      let abortTask = false;
+      let abortReason = null;
       try {
         const nextRes = await fetch(`${API_BASE}/api/worker/next-chunk`, {
           method: 'POST',
@@ -297,13 +307,17 @@ async function processTask(task) {
           : chunkItems.length;
         const totalItems = Number.isFinite(itemsCount) ? itemsCount : chunkItems.length;
 
-        const itemResults = [];
-        let completedCount = 0;
-        let failedCount = 0;
-        let skippedCount = 0;
+  const itemResults = [];
+  let completedCount = 0;
+  let failedCount = 0;
+  let skippedCount = 0;
 
         const progressBuffer = [];
         const flushProgress = async (force = false) => {
+          if (abortTask) {
+            progressBuffer.length = 0;
+            return;
+          }
           if (progressBuffer.length === 0) return;
           if (!force && progressBuffer.length < PROGRESS_BATCH_SIZE) return;
           const first = progressBuffer[0];
@@ -314,7 +328,7 @@ async function processTask(task) {
           const safeProcessedCount = Number.isFinite(totalItems)
             ? Math.min(itemResults.length, totalItems)
             : itemResults.length;
-          await recordProgressUpdate({
+          const progressResult = await recordProgressUpdate({
             taskId: task.id,
             chunkIndex: idx,
             workerId: WORKER_ID,
@@ -326,6 +340,10 @@ async function processTask(task) {
             batchSize: progressBuffer.length,
             items: progressBuffer.map((entry) => ({ ...entry })),
           });
+          if (progressResult?.fatal === 'task-not-found') {
+            abortTask = true;
+            abortReason = 'task-not-found';
+          }
           progressBuffer.length = 0;
         };
 
@@ -412,10 +430,18 @@ async function processTask(task) {
 
             const shouldForceFlush = progressBuffer.length >= PROGRESS_BATCH_SIZE || itemOffset === chunkItems.length - 1;
             await flushProgress(shouldForceFlush);
+            if (abortTask) {
+              log('aborting chunk due to task removal', task.id);
+              break;
+            }
           }
         }
 
         await flushProgress(true);
+        if (abortTask) {
+          log('task no longer available while processing chunk', task.id);
+          break;
+        }
 
         const statusToSend = failedCount > 0
           ? 'failed'
@@ -454,6 +480,13 @@ async function processTask(task) {
           headers: { 'content-type': 'application/json' },
           body: JSON.stringify(resultPayload),
         });
+        if (recordRes.status === 404) {
+          const body = await recordRes.text();
+          log('record-bucket failed', recordRes.status, body);
+          abortTask = true;
+          abortReason = 'task-not-found';
+          break;
+        }
         if (!recordRes.ok) {
           const body = await recordRes.text();
           log('record-bucket failed', recordRes.status, body);
@@ -462,8 +495,17 @@ async function processTask(task) {
         log('posted bucket', idx, statusToSend, `(${completedCount} completed, ${failedCount} failed, ${skippedCount} skipped)`);
         // small pause to avoid tight loop
         await new Promise(r => setTimeout(r, 200));
+
+        if (abortTask) {
+          break;
+        }
       } catch (e) {
         log('error requesting/processing chunk', e.message);
+        break;
+      }
+
+      if (abortTask && abortReason === 'task-not-found') {
+        log('stopping task processing because backend no longer knows task', task.id);
         break;
       }
     }

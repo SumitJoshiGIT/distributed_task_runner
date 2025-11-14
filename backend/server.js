@@ -13,7 +13,7 @@ const app = express();
 const PORT = process.env.PORT || 4000;
 const WORKER_TIMEOUT_MS = 20 * 60 * 1000; // 20 minutes
 const DEFAULT_MAX_BUCKETS = 10;
-const DEFAULT_BUCKET_BYTES = 64 * 1024; // 64KB
+const DEFAULT_BUCKET_BYTES = 1024 * 1024; // 1MB
 const BUCKET_TIMEOUT_MS = 20 * 60 * 1000; // 20 minutes
 const WORKER_SWEEP_INTERVAL_MS = Math.min(WORKER_TIMEOUT_MS, 60 * 1000);
 const ITEM_PREVIEW_LIMIT = 240;
@@ -27,6 +27,7 @@ const PLATFORM_FEE_PERCENT = Number.isFinite(Number(process.env.PLATFORM_FEE_PER
   ? Number(process.env.PLATFORM_FEE_PERCENT)
   : 10;
 const WORKER_FEE_PERCENT = 100 - PLATFORM_FEE_PERCENT;
+const DISABLE_BUDGET_CHECKS = String(process.env.DISABLE_BUDGET_CHECKS ?? "true").toLowerCase() === "true";
 
 const SANDBOX_WALLET_ENABLED = String(process.env.WALLET_SANDBOX_ENABLED || "").toLowerCase() === "true";
 
@@ -166,7 +167,7 @@ function issueChunkPayout(db, task, chunkResult, workerId) {
   if (chunkResult.payoutIssued) return false;
   if (chunkResult.status !== "completed") return false;
   const { costPerChunk, maxBillableChunks, chunksPaid } = resolveTaskBudget(task);
-  if (chunksPaid >= maxBillableChunks) return false;
+  if (!DISABLE_BUDGET_CHECKS && chunksPaid >= maxBillableChunks) return false;
 
   const creatorSessionId = task.creatorId || task.creatorSessionId || null;
   const customerAccount = findUserBySessionId(db, creatorSessionId);
@@ -1411,14 +1412,36 @@ app.post('/api/worker/next-chunk', async (req, res) => {
     return res.json({ ok: false, message: 'not-assigned' });
   }
   const budgetInfo = resolveTaskBudget(task);
-  const activeAssignments = (db.data.chunkAssignments || []).filter((a) => a.taskId === taskId);
-  const taskCustomer = findUserBySessionId(db, task.creatorId || null);
-  if (budgetInfo.maxBillableChunks > 0 && budgetInfo.chunksPaid + activeAssignments.length >= budgetInfo.maxBillableChunks) {
-    return res.json({ ok: false, message: 'budget-exhausted' });
+  const assignmentsCollection = db.data.chunkAssignments || [];
+  sweepExpiredAssignments(db, task.id);
+
+  const finishedResults = db.data.chunkResults || [];
+  const finishedStatuses = new Set(["completed", "failed", "skipped"]);
+
+  let existingResumeAssignment = null;
+  for (let i = assignmentsCollection.length - 1; i >= 0; i--) {
+    const entry = assignmentsCollection[i];
+    if (entry.taskId !== taskId) continue;
+    if (entry.workerId !== workerId) continue;
+    const relatedResult = finishedResults.find(
+      (result) => result.taskId === taskId && result.chunkIndex === entry.chunkIndex
+    );
+    if (relatedResult && finishedStatuses.has(relatedResult.status)) {
+      assignmentsCollection.splice(i, 1);
+      continue;
+    }
+    if (!existingResumeAssignment) {
+      existingResumeAssignment = entry;
+    } else {
+      const existingTime = existingResumeAssignment.assignedAt ? Date.parse(existingResumeAssignment.assignedAt) : 0;
+      const candidateTime = entry.assignedAt ? Date.parse(entry.assignedAt) : 0;
+      if (candidateTime < existingTime) {
+        existingResumeAssignment = entry;
+      }
+    }
   }
-  if (taskCustomer && taskCustomer.walletBalance < budgetInfo.costPerChunk) {
-    return res.json({ ok: false, message: 'insufficient-funds' });
-  }
+
+  const activeAssignments = assignmentsCollection.filter((a) => a.taskId === taskId);
   const dataItems = readTaskItems(task);
   if (!Array.isArray(dataItems) || dataItems.length === 0) {
     return res.status(400).json({ error: 'No data items available for task' });
@@ -1426,7 +1449,53 @@ app.post('/api/worker/next-chunk', async (req, res) => {
   task.totalItems = dataItems.length;
   const mutatedConfig = ensureBucketConfig(task, dataItems);
 
-  sweepExpiredAssignments(db, task.id);
+  if (existingResumeAssignment) {
+    const resumeRange = normalizeRange(existingResumeAssignment, existingResumeAssignment.chunkIndex ?? null);
+    const resumeStart = resumeRange?.start ?? existingResumeAssignment.rangeStart ?? existingResumeAssignment.chunkIndex ?? 0;
+    const resumeEnd = resumeRange?.end ?? existingResumeAssignment.rangeEnd ?? resumeStart;
+    const safeStart = Math.max(0, Math.min(resumeStart, dataItems.length));
+    let safeEnd = Math.max(safeStart, Math.min(resumeEnd, dataItems.length));
+    if (safeEnd <= safeStart) {
+      const fallbackCount = Number.isFinite(existingResumeAssignment.itemsCount)
+        ? Math.max(1, existingResumeAssignment.itemsCount)
+        : 1;
+      safeEnd = Math.min(dataItems.length, safeStart + fallbackCount);
+    }
+    const chunkData = dataItems.slice(safeStart, safeEnd);
+
+    existingResumeAssignment.expiresAt = new Date(Date.now() + BUCKET_TIMEOUT_MS).toISOString();
+    existingResumeAssignment.updatedAt = new Date().toISOString();
+    if (!existingResumeAssignment.workerId) existingResumeAssignment.workerId = workerId;
+
+    await saveDb();
+
+    const taskResp = buildTaskResponse(task);
+    return res.json({
+      ok: true,
+      task: taskResp,
+      chunkIndex: Number.isFinite(existingResumeAssignment.chunkIndex)
+        ? existingResumeAssignment.chunkIndex
+        : safeStart,
+      chunkData,
+      rangeStart: Number.isFinite(safeStart) ? safeStart : null,
+      rangeEnd: Number.isFinite(safeEnd) ? safeEnd : null,
+      totalItems: dataItems.length,
+      bucketBytes: existingResumeAssignment.bytesUsed || null,
+      maxBucketBytes: task.bucketConfig.maxBucketBytes,
+      resume: true,
+      processedCount: Number.isFinite(existingResumeAssignment.processedCount)
+        ? existingResumeAssignment.processedCount
+        : null,
+    });
+  }
+
+    const taskCustomer = findUserBySessionId(db, task.creatorId || null);
+    if (!DISABLE_BUDGET_CHECKS && budgetInfo.maxBillableChunks > 0 && budgetInfo.chunksPaid + activeAssignments.length >= budgetInfo.maxBillableChunks) {
+      return res.json({ ok: false, message: 'budget-exhausted' });
+    }
+    if (!DISABLE_BUDGET_CHECKS && taskCustomer && taskCustomer.walletBalance < budgetInfo.costPerChunk) {
+      return res.json({ ok: false, message: 'insufficient-funds' });
+    }
 
   const finishedRanges = collectRanges((db.data.chunkResults || []).filter((r) => r.taskId === taskId));
   const assignedRanges = collectRanges(activeAssignments);
@@ -1913,20 +1982,6 @@ app.get("/api/tasks/:taskId/results", (req, res) => {
       return aIndex - bIndex;
     });
   res.json({ results, assignments });
-});
-
-app.delete("/api/tasks/:taskId", async (req, res) => {
-  const db = getDb();
-  const idx = db.data.tasks.findIndex((t) => t.id === req.params.taskId);
-  if (idx === -1) return res.status(404).json({ error: "Task not found" });
-  const [task] = db.data.tasks.splice(idx, 1);
-  db.data.chunkResults = (db.data.chunkResults || []).filter((r) => r.taskId !== task.id);
-  await saveDb();
-  const dir = getTaskStoragePath(task);
-  if (dir && fs.existsSync(dir)) {
-    fs.rmSync(dir, { recursive: true, force: true });
-  }
-  res.json({ ok: true });
 });
 
 app.listen(PORT, () => {
