@@ -72,6 +72,7 @@ vite.config.ts       # Vite configuration for dev/build tooling
 ## Supporting Files
 
 - **`scripts/worker-runner.mjs`**: Node-based worker client. Configurable via environment variables (`WORKER_ID`, `API_BASE`, etc.). Automates chunk polling, optional `main.js` execution, progress batching, and chunk result submission.
+- **`scripts/run-workers.mjs`**: Convenience launcher that spawns multiple worker runners at once and forwards stdout/stderr for each worker ID.
 - **`index.html`**: Minimal HTML shell for Vite to inject the React bundle.
 - **`vite.config.ts`**: Vite setup enabling TypeScript, React Fast Refresh, and proxy adjustments if needed.
 - **`package.json`**: Declares frontend/backend scripts (`npm run dev`, `npm run worker`) and dependencies (React, Express, LowDB, etc.).
@@ -86,7 +87,7 @@ vite.config.ts       # Vite configuration for dev/build tooling
 4. Review wallet transactions and platform fee deductions.
 
 ### Worker Flow
-1. Run the worker runner: `WORKER_ID=worker-1 API_BASE=http://localhost:4000 node scripts/worker-runner.mjs`.
+1. Run the worker runner: `WORKER_ID=worker-1 API_BASE=http://localhost:4000 node scripts/worker-runner.mjs`, or launch multiple workers with `node scripts/run-workers.mjs worker-1 worker-2`.
 2. Worker polls `/api/tasks`, claims assigned tasks, and loops on `/api/worker/next-chunk` for bucket assignments.
 3. Processes each chunk (optionally executing uploaded `main.js`) and posts results to `/api/worker/record-chunk` with progress updates.
 4. Earns credits automatically when chunks complete and budgets permit.
@@ -107,6 +108,9 @@ npm run dev
 
 # (optional) launch a worker client
 WORKER_ID=worker-1 API_BASE=http://localhost:4000 node scripts/worker-runner.mjs
+
+# (optional) launch multiple workers at once
+node scripts/run-workers.mjs worker-1 worker-2 worker-3
 ```
 
 Then open `http://localhost:5173` for the UI. Customers can create tasks and monitor progress; workers will pick up chunks automatically.

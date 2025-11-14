@@ -1727,10 +1727,14 @@ function WorkerView({
   const refresh = useCallback(async () => {
     try {
       const allTasks = await listTasks();
-      const available = allTasks.filter(
-        (t) => t.status === "queued" && (t.assignedWorkers || []).length === 0
-      );
       const mine = allTasks.filter((t) => (t.assignedWorkers || []).includes(sessionId));
+      const available = allTasks.filter((t) => {
+        if (t.revoked) return false;
+        if (t.status === "completed" || t.status === "failed") return false;
+        const assigned = t.assignedWorkers || [];
+        if (assigned.includes(sessionId)) return false;
+        return true; // keep visible so additional workers can opt in
+      });
       setAvailableTasks(available);
       setAssignedTasks(mine);
       setSelectedTask((prev) => {
@@ -2534,7 +2538,7 @@ export default function App() {
   return (
     <div className="app">
       <header>
-        <h1>Shifted Task Network</h1>
+        <h1>Distributed Computing</h1>
         <p>Offline-friendly asset-backed task processing</p>
         <nav>
           <button

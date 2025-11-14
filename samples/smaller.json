@@ -1,0 +1,6627 @@
+[
+  {
+    "ticketId": "SUP-1001",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4000",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-15T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1002",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4001",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-15T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1003",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4002",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-15T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1004",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4003",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-15T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1005",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4004",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-15T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1006",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4005",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-15T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1007",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4006",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-15T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1008",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4007",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-15T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1009",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4008",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-15T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1010",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4009",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-15T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1011",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4010",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-15T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1012",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4011",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-15T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1013",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4012",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-15T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1014",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4013",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-15T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1015",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4014",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-15T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1016",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4015",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-16T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1017",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4016",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-16T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1018",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4017",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-16T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1019",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4018",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-16T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1020",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4019",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-16T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1021",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4020",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-16T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1022",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4021",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-16T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1023",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4022",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-16T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1024",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4023",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-16T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1025",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4024",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-16T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1026",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4025",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-16T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1027",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4026",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-16T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1028",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4027",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-16T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1029",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4028",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-16T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1030",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4029",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-16T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1031",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4030",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-16T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1032",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4031",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-16T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1033",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4032",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-16T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1034",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4033",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-16T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1035",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4034",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-16T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1036",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4035",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-16T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1037",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4036",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-16T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1038",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4037",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-16T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1039",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4038",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-16T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1040",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4039",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-17T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1041",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4040",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-17T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1042",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4041",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-17T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1043",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4042",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-17T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1044",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4043",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-17T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1045",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4044",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-17T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1046",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4045",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-17T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1047",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4046",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-17T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1048",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4047",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-17T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1049",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4048",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-17T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1050",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4049",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-17T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1051",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4050",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-17T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1052",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4051",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-17T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1053",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4052",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-17T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1054",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4053",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-17T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1055",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4054",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-17T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1056",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4055",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-17T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1057",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4056",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-17T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1058",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4057",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-17T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1059",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4058",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-17T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1060",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4059",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-17T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1061",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4060",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-17T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1062",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4061",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-17T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1063",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4062",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-17T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1064",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4063",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-18T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1065",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4064",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-18T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1066",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4065",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-18T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1067",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4066",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-18T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1068",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4067",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-18T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1069",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4068",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-18T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1070",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4069",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-18T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1071",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4070",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-18T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1072",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4071",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-18T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1073",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4072",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-18T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1074",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4073",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-18T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1075",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4074",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-18T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1076",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4075",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-18T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1077",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4076",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-18T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1078",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4077",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-18T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1079",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4078",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-18T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1080",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4079",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-18T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1081",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4080",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-18T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1082",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4081",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-18T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1083",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4082",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-18T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1084",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4083",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-18T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1085",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4084",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-18T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1086",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4085",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-18T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1087",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4086",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-18T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1088",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4087",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-19T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1089",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4088",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-19T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1090",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4089",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-19T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1091",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4090",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-19T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1092",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4091",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-19T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1093",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4092",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-19T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1094",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4093",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-19T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1095",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4094",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-19T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1096",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4095",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-19T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1097",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4096",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-19T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1098",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4097",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-19T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1099",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4098",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-19T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1100",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4099",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-19T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1101",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4100",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-19T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1102",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4101",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-19T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1103",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4102",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-19T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1104",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4103",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-19T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1105",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4104",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-19T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1106",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4105",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-19T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1107",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4106",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-19T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1108",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4107",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-19T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1109",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4108",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-19T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1110",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4109",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-19T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1111",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4110",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-19T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1112",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4111",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-20T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1113",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4112",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-20T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1114",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4113",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-20T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1115",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4114",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-20T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1116",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4115",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-20T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1117",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4116",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-20T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1118",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4117",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-20T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1119",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4118",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-20T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1120",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4119",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-20T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1121",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4120",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-20T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1122",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4121",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-20T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1123",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4122",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-20T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1124",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4123",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-20T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1125",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4124",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-20T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1126",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4125",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-20T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1127",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4126",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-20T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1128",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4127",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-20T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1129",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4128",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-20T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1130",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4129",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-20T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1131",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4130",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-20T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1132",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4131",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-20T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1133",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4132",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-20T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1134",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4133",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-20T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1135",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4134",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-20T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1136",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4135",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-21T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1137",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4136",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-21T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1138",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4137",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-21T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1139",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4138",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-21T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1140",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4139",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-21T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1141",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4140",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-21T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1142",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4141",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-21T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1143",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4142",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-21T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1144",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4143",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-21T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1145",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4144",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-21T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1146",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4145",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-21T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1147",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4146",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-21T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1148",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4147",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-21T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1149",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4148",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-21T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1150",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4149",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-21T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1151",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4150",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-21T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1152",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4151",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-21T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1153",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4152",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-21T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1154",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4153",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-21T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1155",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4154",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-21T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1156",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4155",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-21T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1157",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4156",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-21T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1158",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4157",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-21T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1159",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4158",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-21T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1160",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4159",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-22T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1161",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4160",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-22T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1162",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4161",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-22T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1163",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4162",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-22T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1164",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4163",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-22T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1165",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4164",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-22T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1166",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4165",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-22T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1167",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4166",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-22T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1168",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4167",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-22T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1169",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4168",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-22T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1170",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4169",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-22T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1171",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4170",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-22T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1172",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4171",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-22T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1173",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4172",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-22T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1174",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4173",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-22T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1175",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4174",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-22T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1176",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4175",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-22T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1177",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4176",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-22T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1178",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4177",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-22T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1179",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4178",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-22T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1180",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4179",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-22T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1181",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4180",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-22T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1182",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4181",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-22T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1183",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4182",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-22T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1184",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4183",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-23T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1185",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4184",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-23T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1186",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4185",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-23T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1187",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4186",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-23T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1188",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4187",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-23T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1189",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4188",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-23T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1190",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4189",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-23T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1191",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4190",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-23T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1192",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4191",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-23T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1193",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4192",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-23T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1194",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4193",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-23T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1195",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4194",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-23T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1196",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4195",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-23T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1197",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4196",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-23T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1198",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4197",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-23T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1199",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4198",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-23T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1200",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4199",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-23T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1201",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4200",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-23T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1202",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4201",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-23T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1203",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4202",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-23T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1204",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4203",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-23T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1205",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4204",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-23T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1206",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4205",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-23T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1207",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4206",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-23T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1208",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4207",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-24T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1209",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4208",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-24T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1210",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4209",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-24T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1211",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4210",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-24T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1212",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4211",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-24T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1213",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4212",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-24T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1214",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4213",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-24T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1215",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4214",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-24T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1216",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4215",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-24T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1217",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4216",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-24T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1218",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4217",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-24T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1219",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4218",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-24T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1220",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4219",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-24T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1221",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4220",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-24T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1222",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4221",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-24T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1223",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4222",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-24T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1224",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4223",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-24T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1225",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4224",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-24T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1226",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4225",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-24T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1227",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4226",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-24T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1228",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4227",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-24T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1229",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4228",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-24T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1230",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4229",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-24T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1231",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4230",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-24T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1232",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4231",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-25T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1233",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4232",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-25T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1234",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4233",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-25T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1235",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4234",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-25T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1236",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4235",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-25T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1237",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4236",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-25T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1238",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4237",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-25T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1239",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4238",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-25T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1240",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4239",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-25T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1241",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4240",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-25T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1242",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4241",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-25T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1243",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4242",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-25T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1244",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4243",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-25T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1245",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4244",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-25T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1246",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4245",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-25T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1247",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4246",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-25T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1248",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4247",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-25T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1249",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4248",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-25T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1250",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4249",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-25T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1251",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4250",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-25T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1252",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4251",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-25T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1253",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4252",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-25T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1254",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4253",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-25T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1255",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4254",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-25T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1256",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4255",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-26T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1257",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4256",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-26T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1258",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4257",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-26T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1259",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4258",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-26T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1260",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4259",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-26T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1261",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4260",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-26T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1262",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4261",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-26T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1263",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4262",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-26T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1264",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4263",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-26T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1265",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4264",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-26T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1266",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4265",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-26T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1267",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4266",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-26T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1268",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4267",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-26T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1269",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4268",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-26T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1270",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4269",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-26T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1271",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4270",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-26T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1272",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4271",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-26T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1273",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4272",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-26T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1274",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4273",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-26T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1275",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4274",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-26T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1276",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4275",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-26T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1277",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4276",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-26T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1278",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4277",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-26T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1279",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4278",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-26T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1280",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4279",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-27T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1281",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4280",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-27T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1282",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4281",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-27T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1283",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4282",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-27T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1284",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4283",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-27T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1285",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4284",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-27T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1286",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4285",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-27T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1287",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4286",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-27T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1288",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4287",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-27T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1289",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4288",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-27T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1290",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4289",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-27T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1291",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4290",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-27T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1292",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4291",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-27T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1293",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4292",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-27T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1294",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4293",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-27T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1295",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4294",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-27T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1296",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4295",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-27T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1297",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4296",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-27T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1298",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4297",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-27T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1299",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4298",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-27T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1300",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4299",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-27T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1301",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4300",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-27T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1302",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4301",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-27T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1303",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4302",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-27T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1304",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4303",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-28T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1305",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4304",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-28T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1306",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4305",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-28T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1307",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4306",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-28T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1308",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4307",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-28T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1309",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4308",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-28T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1310",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4309",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-28T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1311",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4310",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-28T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1312",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4311",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-28T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1313",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4312",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-28T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1314",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4313",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-28T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1315",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4314",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-28T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1316",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4315",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-28T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1317",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4316",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-28T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1318",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4317",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-28T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1319",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4318",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-28T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1320",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4319",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-28T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1321",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4320",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-28T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1322",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4321",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-28T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1323",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4322",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-28T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1324",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4323",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-28T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1325",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4324",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-28T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1326",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4325",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-28T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1327",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4326",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-28T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1328",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4327",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-29T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1329",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4328",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-29T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1330",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4329",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-29T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1331",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4330",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-29T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1332",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4331",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-29T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1333",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4332",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-29T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1334",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4333",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-29T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1335",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4334",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-29T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1336",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4335",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-29T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1337",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4336",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-29T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1338",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4337",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-29T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1339",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4338",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-29T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1340",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4339",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-29T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1341",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4340",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-29T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1342",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4341",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-29T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1343",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4342",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-29T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1344",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4343",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-29T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1345",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4344",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-29T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1346",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4345",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-29T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1347",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4346",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-29T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1348",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4347",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-29T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1349",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4348",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-29T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1350",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4349",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-29T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1351",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4350",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-29T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1352",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4351",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-30T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1353",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4352",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-30T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1354",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4353",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-30T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1355",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4354",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-30T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1356",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4355",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-30T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1357",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4356",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-30T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1358",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4357",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-30T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1359",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4358",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-30T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1360",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4359",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-30T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1361",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4360",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-30T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1362",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4361",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-30T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1363",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4362",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-30T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1364",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4363",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-30T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1365",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4364",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-30T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1366",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4365",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-30T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1367",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4366",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-30T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1368",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4367",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-30T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1369",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4368",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-30T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1370",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4369",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-30T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1371",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4370",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-30T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1372",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4371",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-30T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1373",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4372",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-30T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1374",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4373",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-30T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1375",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4374",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-30T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1376",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4375",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-31T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1377",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4376",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-31T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1378",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4377",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-31T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1379",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4378",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-31T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1380",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4379",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-31T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1381",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4380",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-31T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1382",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4381",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-31T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1383",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4382",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-31T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1384",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4383",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-31T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1385",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4384",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-31T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1386",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4385",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-31T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1387",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4386",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-31T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1388",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4387",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-03-31T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1389",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4388",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-03-31T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1390",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4389",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-03-31T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1391",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4390",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-03-31T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1392",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4391",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-03-31T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1393",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4392",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-03-31T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1394",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4393",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-03-31T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1395",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4394",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-03-31T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1396",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4395",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-03-31T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1397",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4396",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-03-31T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1398",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4397",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-03-31T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1399",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4398",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-03-31T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1400",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4399",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-01T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1401",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4400",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-01T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1402",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4401",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-01T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1403",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4402",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-01T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1404",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4403",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-01T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1405",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4404",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-01T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1406",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4405",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-01T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1407",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4406",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-01T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1408",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4407",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-01T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1409",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4408",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-01T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1410",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4409",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-01T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1411",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4410",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-01T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1412",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4411",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-01T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1413",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4412",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-01T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1414",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4413",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-01T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1415",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4414",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-01T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1416",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4415",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-01T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1417",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4416",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-01T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1418",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4417",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-01T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1419",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4418",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-01T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1420",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4419",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-01T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1421",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4420",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-01T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1422",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4421",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-01T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1423",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4422",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-01T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1424",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4423",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-02T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1425",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4424",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-02T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1426",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4425",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-02T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1427",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4426",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-02T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1428",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4427",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-02T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1429",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4428",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-02T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1430",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4429",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-02T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1431",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4430",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-02T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1432",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4431",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-02T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1433",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4432",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-02T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1434",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4433",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-02T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1435",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4434",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-02T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1436",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4435",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-02T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1437",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4436",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-02T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1438",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4437",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-02T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1439",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4438",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-02T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1440",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4439",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-02T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1441",
+    "customer": "Northwind Logistics",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "API throttle warnings 4440",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-02T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1442",
+    "customer": "Silverline Finance",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Multi-factor auth failing for admins 4441",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-02T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1443",
+    "customer": "Brightside Education",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Brand assets update 4442",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-02T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1444",
+    "customer": "Granite Manufacturing",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Audit assistance request 4443",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-02T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1445",
+    "customer": "Cloud Harbor",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Payment failure for invoice 4444",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-02T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1446",
+    "customer": "Lumen Media",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Slow data export job 4445",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-02T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1447",
+    "customer": "Terra Healthcare",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Production outage in region 4446",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-02T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1448",
+    "customer": "Apex Dynamics",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Feature request: export weekly summary 4447",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-03T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1449",
+    "customer": "Cobalt Energy",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Incorrect timezone on reports 4448",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-03T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1450",
+    "customer": "Nova Travel",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Webhook retries exhausted 4449",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-03T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1451",
+    "customer": "Orbit Ventures",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Critical vulnerability disclosed 4450",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-03T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1452",
+    "customer": "Blue Meadow Foods",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Onboarding checklist 4451",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-03T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1453",
+    "customer": "Vector Labs",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "API throttle warnings 4452",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-03T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1454",
+    "customer": "Radiant Retail",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Multi-factor auth failing for admins 4453",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-03T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1455",
+    "customer": "Summit Analytics",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Brand assets update 4454",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-03T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1456",
+    "customer": "Northwind Logistics",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Audit assistance request 4455",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-03T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1457",
+    "customer": "Silverline Finance",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Payment failure for invoice 4456",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-03T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1458",
+    "customer": "Brightside Education",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Slow data export job 4457",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-03T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1459",
+    "customer": "Granite Manufacturing",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Production outage in region 4458",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-03T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1460",
+    "customer": "Cloud Harbor",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Feature request: export weekly summary 4459",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-03T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1461",
+    "customer": "Lumen Media",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Incorrect timezone on reports 4460",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-03T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1462",
+    "customer": "Terra Healthcare",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Webhook retries exhausted 4461",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-03T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1463",
+    "customer": "Apex Dynamics",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Critical vulnerability disclosed 4462",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-03T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1464",
+    "customer": "Cobalt Energy",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Onboarding checklist 4463",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-03T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1465",
+    "customer": "Nova Travel",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "API throttle warnings 4464",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-03T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1466",
+    "customer": "Orbit Ventures",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Multi-factor auth failing for admins 4465",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-03T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1467",
+    "customer": "Blue Meadow Foods",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Brand assets update 4466",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-03T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1468",
+    "customer": "Vector Labs",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Audit assistance request 4467",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-03T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1469",
+    "customer": "Radiant Retail",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "Payment failure for invoice 4468",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-03T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1470",
+    "customer": "Summit Analytics",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Slow data export job 4469",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-03T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1471",
+    "customer": "Northwind Logistics",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Production outage in region 4470",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-03T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1472",
+    "customer": "Silverline Finance",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Feature request: export weekly summary 4471",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-04T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1473",
+    "customer": "Brightside Education",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Incorrect timezone on reports 4472",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-04T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1474",
+    "customer": "Granite Manufacturing",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Webhook retries exhausted 4473",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-04T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1475",
+    "customer": "Cloud Harbor",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Critical vulnerability disclosed 4474",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-04T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1476",
+    "customer": "Lumen Media",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Onboarding checklist 4475",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-04T04:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1477",
+    "customer": "Terra Healthcare",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "API throttle warnings 4476",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-04T05:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1478",
+    "customer": "Apex Dynamics",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Multi-factor auth failing for admins 4477",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-04T06:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1479",
+    "customer": "Cobalt Energy",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Brand assets update 4478",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-04T07:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1480",
+    "customer": "Nova Travel",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Audit assistance request 4479",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-04T08:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1481",
+    "customer": "Orbit Ventures",
+    "priority": "Low",
+    "channel": "Email",
+    "subject": "Payment failure for invoice 4480",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-04T09:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1482",
+    "customer": "Blue Meadow Foods",
+    "priority": "Medium",
+    "channel": "Chat",
+    "subject": "Slow data export job 4481",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-04T10:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1483",
+    "customer": "Vector Labs",
+    "priority": "High",
+    "channel": "Phone",
+    "subject": "Production outage in region 4482",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-04T11:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1484",
+    "customer": "Radiant Retail",
+    "priority": "Urgent",
+    "channel": "Slack",
+    "subject": "Feature request: export weekly summary 4483",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-04T12:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1485",
+    "customer": "Summit Analytics",
+    "priority": "Low",
+    "channel": "Webhook",
+    "subject": "Incorrect timezone on reports 4484",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-04T13:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1486",
+    "customer": "Northwind Logistics",
+    "priority": "Medium",
+    "channel": "Email",
+    "subject": "Webhook retries exhausted 4485",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-04T14:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1487",
+    "customer": "Silverline Finance",
+    "priority": "High",
+    "channel": "Chat",
+    "subject": "Critical vulnerability disclosed 4486",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-04T15:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1488",
+    "customer": "Brightside Education",
+    "priority": "Urgent",
+    "channel": "Phone",
+    "subject": "Onboarding checklist 4487",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-04T16:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1489",
+    "customer": "Granite Manufacturing",
+    "priority": "Low",
+    "channel": "Slack",
+    "subject": "API throttle warnings 4488",
+    "description": "Nightly batch exceeded API rate limits during processing and needs a higher burst capacity.",
+    "tags": [
+      "api",
+      "rate-limit"
+    ],
+    "createdAt": "2025-04-04T17:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1490",
+    "customer": "Cloud Harbor",
+    "priority": "Medium",
+    "channel": "Webhook",
+    "subject": "Multi-factor auth failing for admins 4489",
+    "description": "MFA push notifications are failing with invalid token errors.",
+    "tags": [
+      "security",
+      "mfa"
+    ],
+    "createdAt": "2025-04-04T18:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1491",
+    "customer": "Lumen Media",
+    "priority": "High",
+    "channel": "Email",
+    "subject": "Brand assets update 4490",
+    "description": "Marketing updated assets and needs instructions for rolling them out.",
+    "tags": [
+      "branding",
+      "support"
+    ],
+    "createdAt": "2025-04-04T19:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1492",
+    "customer": "Terra Healthcare",
+    "priority": "Urgent",
+    "channel": "Chat",
+    "subject": "Audit assistance request 4491",
+    "description": "Compliance team needs access logs exported ASAP.",
+    "tags": [
+      "compliance",
+      "audit",
+      "logs"
+    ],
+    "createdAt": "2025-04-04T20:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1493",
+    "customer": "Apex Dynamics",
+    "priority": "Low",
+    "channel": "Phone",
+    "subject": "Payment failure for invoice 4492",
+    "description": "Finance reports recurring failures when attempting to pay invoice through the customer portal.",
+    "tags": [
+      "billing",
+      "payment",
+      "portal"
+    ],
+    "createdAt": "2025-04-04T21:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1494",
+    "customer": "Cobalt Energy",
+    "priority": "Medium",
+    "channel": "Slack",
+    "subject": "Slow data export job 4493",
+    "description": "Operations noticed scheduled export tasks taking longer than usual and needs confirmation.",
+    "tags": [
+      "performance",
+      "export"
+    ],
+    "createdAt": "2025-04-04T22:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1495",
+    "customer": "Nova Travel",
+    "priority": "High",
+    "channel": "Webhook",
+    "subject": "Production outage in region 4494",
+    "description": "Customers in the specified region cannot authenticate and are experiencing an outage.",
+    "tags": [
+      "outage",
+      "auth"
+    ],
+    "createdAt": "2025-04-04T23:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1496",
+    "customer": "Orbit Ventures",
+    "priority": "Urgent",
+    "channel": "Email",
+    "subject": "Feature request: export weekly summary 4495",
+    "description": "Customer is requesting a new dashboard export feature to automate weekly summaries.",
+    "tags": [
+      "feature",
+      "dashboard"
+    ],
+    "createdAt": "2025-04-05T00:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1497",
+    "customer": "Blue Meadow Foods",
+    "priority": "Low",
+    "channel": "Chat",
+    "subject": "Incorrect timezone on reports 4496",
+    "description": "Dashboards display an incorrect timezone for the tenant configuration.",
+    "tags": [
+      "bug",
+      "reports",
+      "timezone"
+    ],
+    "createdAt": "2025-04-05T01:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1498",
+    "customer": "Vector Labs",
+    "priority": "Medium",
+    "channel": "Phone",
+    "subject": "Webhook retries exhausted 4497",
+    "description": "Webhook delivery stopped retrying even though the endpoint responded with 503.",
+    "tags": [
+      "webhooks",
+      "reliability"
+    ],
+    "createdAt": "2025-04-05T02:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1499",
+    "customer": "Radiant Retail",
+    "priority": "High",
+    "channel": "Slack",
+    "subject": "Critical vulnerability disclosed 4498",
+    "description": "Security disclosed a new CVE affecting dependencies and needs mitigation guidance.",
+    "tags": [
+      "security",
+      "cve"
+    ],
+    "createdAt": "2025-04-05T03:20:00.000Z"
+  },
+  {
+    "ticketId": "SUP-1500",
+    "customer": "Summit Analytics",
+    "priority": "Urgent",
+    "channel": "Webhook",
+    "subject": "Onboarding checklist 4499",
+    "description": "Customer success needs an onboarding checklist for their new team.",
+    "tags": [
+      "documentation",
+      "onboarding"
+    ],
+    "createdAt": "2025-04-05T04:20:00.000Z"
+  }
+]

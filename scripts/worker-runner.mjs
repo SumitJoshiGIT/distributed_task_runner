@@ -32,8 +32,12 @@ const NO_CHUNK_BACKOFF_MS = Number(process.env.NO_CHUNK_BACKOFF_MS) || Math.min(
 const NO_CHUNK_MAX_RETRIES = Number.isFinite(Number(process.env.NO_CHUNK_MAX_RETRIES))
   ? Math.max(1, Number(process.env.NO_CHUNK_MAX_RETRIES))
   : 12;
+const VERBOSE_WORKER_LOGS = process.env.VERBOSE_WORKER_LOGS === 'true';
 
-function log(...args) { console.log(new Date().toISOString(), '[worker]', ...args); }
+function log(...args) {
+  if (!VERBOSE_WORKER_LOGS) return;
+  console.log(new Date().toISOString(), '[worker]', ...args);
+}
 
 function safeStringify(value) {
   try {
@@ -43,6 +47,29 @@ function safeStringify(value) {
     return String(value);
   }
 }
+
+let completedChunksCount = 0;
+let lastStatusLine = '';
+
+function updateStatusLine({ chunkIndex = '-', itemsInChunk = '-', itemsProcessed = 0 } = {}) {
+  const chunkLabel = Number.isFinite(chunkIndex) ? chunkIndex : (chunkIndex ?? '-');
+  const itemsLabel = Number.isFinite(itemsInChunk) ? itemsInChunk : (itemsInChunk ?? '-');
+  const processedLabel = Number.isFinite(itemsProcessed) ? itemsProcessed : (itemsProcessed ?? '-');
+  const line = `${WORKER_ID} chunk:${chunkLabel} items:${itemsLabel} processed:${processedLabel} completed_chunks:${completedChunksCount}`;
+  if (line === lastStatusLine) return;
+  process.stdout.write(`\r\x1b[K${line}`);
+  lastStatusLine = line;
+}
+
+function setIdleStatus() {
+  updateStatusLine({ chunkIndex: '-', itemsInChunk: 0, itemsProcessed: 0 });
+}
+
+setIdleStatus();
+
+process.once('exit', () => {
+  if (lastStatusLine) process.stdout.write('\n');
+});
 
 function previewValue(value, limit = ITEM_PREVIEW_LIMIT) {
   const raw = safeStringify(value) || '';
@@ -233,8 +260,12 @@ async function processTask(task) {
             cwd: mainCwd,
             env: { ...process.env, TASK_ID: task.id, API_BASE }
           });
-          cp.stdout.on('data', d => process.stdout.write(`[task ${task.id}] ` + d));
-          cp.stderr.on('data', d => process.stderr.write(`[task ${task.id}] ERR ` + d));
+          cp.stdout.on('data', (d) => {
+            if (VERBOSE_WORKER_LOGS) process.stdout.write(`[task ${task.id}] ` + d);
+          });
+          cp.stderr.on('data', (d) => {
+            if (VERBOSE_WORKER_LOGS) process.stderr.write(`[task ${task.id}] ERR ` + d);
+          });
           cp.on('close', code => {
             if (code === 0) resolve(); else reject(new Error(`main.js exited ${code}`));
           });
@@ -273,6 +304,7 @@ async function processTask(task) {
               break;
             }
             await new Promise((resolve) => setTimeout(resolve, NO_CHUNK_BACKOFF_MS));
+            setIdleStatus();
             continue;
           }
           if (normalizedMessage === 'not-assigned') {
@@ -306,6 +338,8 @@ async function processTask(task) {
           ? rangeItemCount
           : chunkItems.length;
         const totalItems = Number.isFinite(itemsCount) ? itemsCount : chunkItems.length;
+
+        updateStatusLine({ chunkIndex: idx, itemsInChunk: totalItems, itemsProcessed: 0 });
 
   const itemResults = [];
   let completedCount = 0;
@@ -357,6 +391,7 @@ async function processTask(task) {
             error: null,
           });
           skippedCount = 1;
+          updateStatusLine({ chunkIndex: idx, itemsInChunk: totalItems, itemsProcessed: 0 });
         } else {
           for (let itemOffset = 0; itemOffset < chunkItems.length; itemOffset++) {
             const chunkItem = chunkItems[itemOffset];
@@ -392,11 +427,11 @@ async function processTask(task) {
                   });
                   cp.stdout.on('data', (d) => {
                     stdoutBuf += d.toString();
-                    process.stdout.write(`[task ${task.id}] ` + d);
+                    if (VERBOSE_WORKER_LOGS) process.stdout.write(`[task ${task.id}] ` + d);
                   });
                   cp.stderr.on('data', (d) => {
                     stderrBuf += d.toString();
-                    process.stderr.write(`[task ${task.id}] ERR ` + d);
+                    if (VERBOSE_WORKER_LOGS) process.stderr.write(`[task ${task.id}] ERR ` + d);
                   });
                   cp.on('close', (code) => {
                     if (code === 0) resolve(); else reject(new Error(`main.js exited ${code}`));
@@ -430,6 +465,10 @@ async function processTask(task) {
 
             const shouldForceFlush = progressBuffer.length >= PROGRESS_BATCH_SIZE || itemOffset === chunkItems.length - 1;
             await flushProgress(shouldForceFlush);
+            const processedSoFar = Number.isFinite(totalItems)
+              ? Math.min(itemResults.length, totalItems)
+              : itemResults.length;
+            updateStatusLine({ chunkIndex: idx, itemsInChunk: totalItems, itemsProcessed: processedSoFar });
             if (abortTask) {
               log('aborting chunk due to task removal', task.id);
               break;
@@ -493,6 +532,10 @@ async function processTask(task) {
           break;
         }
         log('posted bucket', idx, statusToSend, `(${completedCount} completed, ${failedCount} failed, ${skippedCount} skipped)`);
+        if (!abortTask) {
+          completedChunksCount += 1;
+          updateStatusLine({ chunkIndex: idx, itemsInChunk: totalItems, itemsProcessed: totalItems });
+        }
         // small pause to avoid tight loop
         await new Promise(r => setTimeout(r, 200));
 
@@ -513,6 +556,7 @@ async function processTask(task) {
   } finally {
     // cleanup
     try { fs.rmSync(tmp, { recursive: true, force: true }); } catch (e) {}
+    setIdleStatus();
   }
 }
 
@@ -529,9 +573,12 @@ async function loop() {
             log('process error', e.message);
           }
         }
+      } else {
+        setIdleStatus();
       }
     } catch (e) {
       log('poll error', e.message);
+      setIdleStatus();
     }
     if (!heartbeatTimer) {
       heartbeatTimer = setInterval(() => {
